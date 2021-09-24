@@ -45,5 +45,23 @@ namespace NUnitTesting
             }
             Console.WriteLine($"Temperature in celcius is: {celciusTemp}\nTemperature in farenheat is: {farenheatTemp}");
         }
+        // Monthly payment calculation method
+        public void MonthlyPayment()
+        {
+            // initialize variables
+            double r, n;
+            // Get the P, T, R values
+            Console.WriteLine("Enter the Loan amount taken");
+            double P = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the number of years in which Loan amount has to be paid");
+            double T = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter yearly interest rate ");
+            double R = Convert.ToDouble(Console.ReadLine());
+            r = R / 1200;
+            n = T * 12;
+            double monthlyPayment = (P * r) / (1 - Math.Pow((1 + r), -n));
+            Console.WriteLine($"Monthly payment to be done to payoff the loan amount of {P} " +
+                $"with annual interest rate of {R}, in {T} years is {monthlyPayment}");
+        }
     }
 }

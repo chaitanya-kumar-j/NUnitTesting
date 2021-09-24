@@ -28,7 +28,7 @@ namespace NUnitTesting
                         new Util().TempConv();
                         break;
                     case 4:
-
+                        new Util().MonthlyPayment();
                         break;
                     case 5:
 
