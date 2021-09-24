@@ -31,7 +31,7 @@ namespace NUnitTesting
                         new Util().MonthlyPayment();
                         break;
                     case 5:
-
+                        new SqrtByNewtonMethod().CalcSqrt();
                         break;
                     case 6:
 
