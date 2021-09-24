@@ -22,7 +22,7 @@ namespace NUnitTesting
                         new VendingMachine().GetChangeByRecur();
                         break;
                     case 2:
-
+                        new Util().GetDayOfWeek();
                         break;
                     case 3:
 
