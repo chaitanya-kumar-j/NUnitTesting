@@ -34,7 +34,7 @@ namespace NUnitTesting
                         new SqrtByNewtonMethod().CalcSqrt();
                         break;
                     case 6:
-
+                        new ConvertToBinary().ToBinary();
                         break;
                     case 7:
 
