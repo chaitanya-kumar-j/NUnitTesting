@@ -25,7 +25,7 @@ namespace NUnitTesting
                         new Util().GetDayOfWeek();
                         break;
                     case 3:
-
+                        new Util().TempConv();
                         break;
                     case 4:
 

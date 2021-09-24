@@ -17,11 +17,33 @@ namespace NUnitTesting
             int month = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the day of the month");
             int day = Convert.ToInt32(Console.ReadLine());
-            year = year - (14 - month) / 12;
-            year = (1 + 1 / 4) * (1 - 1 / 100) * year;
+            year -= (14 - month) / 12;
+            year *= (1 + (1 / 4)) * (1 - 1 / 100);
             month = month + 12 * ((14 - month) / 12) - 2;
-            day = (day + year + 31 * month / 12) % 7;
+            day = (day + year + (31 * month / 12)) % 7;
             Console.WriteLine($"Day of the week is {day} i.e., {days[day]}");
+        }
+        public void TempConv()
+        {
+            // initialize variables
+            decimal farenheatTemp, celciusTemp;
+            // check farenheat to celcius or celcius to farenheit
+            Console.WriteLine("Enter 1 to convert from farenheat to celcius, otherwise\n" +
+                "Enter 2 to convert from celcius to farenheat");
+            int check = Convert.ToInt32(Console.ReadLine());
+            if (check == 1)
+            {
+                Console.WriteLine("Enter temperature in farenheat");
+                farenheatTemp = Convert.ToDecimal(Console.ReadLine());
+                celciusTemp = (farenheatTemp - 32) * 5 / 9;
+            }
+            else
+            {
+                Console.WriteLine("Enter temperature in celcius");
+                celciusTemp = Convert.ToDecimal(Console.ReadLine());
+                farenheatTemp = (celciusTemp * 9 / 5) + 32;
+            }
+            Console.WriteLine($"Temperature in celcius is: {celciusTemp}\nTemperature in farenheat is: {farenheatTemp}");
         }
     }
 }
