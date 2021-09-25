@@ -37,7 +37,7 @@ namespace NUnitTesting
                         new ConvertToBinary().ToBinary();
                         break;
                     case 7:
-
+                        new Binary().Swap();
                         break;
                     default:
                         isRun = !isRun;

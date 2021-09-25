@@ -6,10 +6,10 @@ namespace NUnitTesting
 {
     class ConvertToBinary
     {
-        public void ToBinary()
+        public int ToBinary()
         {
             // get decimal number
-            Console.WriteLine("Enter the decimal number: ");
+            Console.WriteLine("Enter the decimal number between 0 to 255 only: ");
             int decimalNumber = Convert.ToInt32(Console.ReadLine());
             // initialize variable
             int binaryNumber= 0, count = 0, digit;
@@ -23,6 +23,7 @@ namespace NUnitTesting
             }
             binaryNumber += decimalNumber * Convert.ToInt32(Math.Pow(10, count));
             Console.Write($" {binaryNumber}\n");
+            return binaryNumber;
         }
     }
 }
